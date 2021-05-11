@@ -7,7 +7,11 @@ export default function App() {
 
   return (
     <div className="App">
-      <Card name={firstPokemon.name}></Card>
+      <Card
+        name={firstPokemon.name}
+        frontImage={firstPokemon.images.front}
+        backImage={firstPokemon.images.back}
+      ></Card>
     </div>
   )
 }
