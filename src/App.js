@@ -3,14 +3,15 @@ import Card from './Card'
 import pokemons from './data.json'
 
 export default function App() {
-  const firstPokemon = pokemons[0]
+  const { name, images, types } = pokemons[0]
 
   return (
     <div className="App">
       <Card
-        name={firstPokemon.name}
-        frontImage={firstPokemon.images.front}
-        backImage={firstPokemon.images.back}
+        name={name}
+        frontImage={images.front}
+        backImage={images.back}
+        types={types}
       ></Card>
     </div>
   )

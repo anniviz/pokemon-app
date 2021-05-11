@@ -1,7 +1,25 @@
 .Card {
+  display: grid;
+  grid-template-rows: auto auto auto;
   background: cadetblue;
   width: 300px;
   height: 200px;
   border-radius: 20px;
   padding: 20px;
+}
+
+.Card__types {
+  display: flex;
+  gap: 12px;
+}
+
+.Card__type {
+  background: lightblue;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.Card__images {
+  display: flex;
+  justify-content: center;
 }
