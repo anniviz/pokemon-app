@@ -1,5 +1,9 @@
 import './Card.css'
 
-export default function Card() {
-  return <section className="Card"></section>
+export default function Card({ name }) {
+  return (
+    <section className="Card">
+      <h2>{name}</h2>
+    </section>
+  )
 }
