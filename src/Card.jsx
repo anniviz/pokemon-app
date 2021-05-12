@@ -8,7 +8,9 @@ export default function Card({ name, frontImage, backImage, types }) {
   return (
     <section className="Card">
       <h2>{name}</h2>
-      <button onClick={hanldeButtonClick}>{buttonText}</button>
+      <button onClick={hanldeButtonClick} className="Card__button">
+        {buttonText}
+      </button>
       {showContent && (
         <>
           <ul className="Card__types">{renderTypes(types)}</ul>
