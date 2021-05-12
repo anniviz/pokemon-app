@@ -5,8 +5,7 @@ import pokemons from './data.json'
 export default function App() {
   return (
     <div className="App">
-      {pokemons.map(pokemon => {
-        const { name, images, types, id } = pokemon
+      {pokemons.map(({ name, images, types, id }) => {
         return (
           <Card
             key={id}
