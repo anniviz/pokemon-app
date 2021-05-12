@@ -3,13 +3,17 @@ import './Card.css'
 
 export default function Card({ name, frontImage, backImage, types }) {
   const [showContent, setShowContent] = useState(false)
-  const [buttonText, setButtonText] = useState('show more')
+  const [cardColorHue, setCardColorHue] = useState(180)
 
   return (
-    <section className="Card">
+    <section
+      className="Card"
+      onMouseMove={event => setCardColorHue(event.clientX / 3)}
+      style={{ background: 'hsl(' + cardColorHue + ', 100%, 50%)' }}
+    >
       <h2>{name}</h2>
       <button onClick={hanldeButtonClick} className="Card__button">
-        {buttonText}
+        {showContent ? 'show more' : 'hide details'}
       </button>
       {showContent && (
         <>
@@ -33,6 +37,5 @@ export default function Card({ name, frontImage, backImage, types }) {
 
   function hanldeButtonClick() {
     setShowContent(!showContent)
-    setButtonText(buttonText === 'show more' ? 'hide details' : 'show more')
   }
 }
